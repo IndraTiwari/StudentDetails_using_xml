@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+<bean id="student"
+   class="com.itc.spring.student.Student">
+          <constructor-arg value="101" index="0"/>
+          <constructor-arg value="Indra" index="1"/>
+          <constructor-arg value="M" index="2"/>
+          <constructor-arg value="26" index="3"/>
+   </bean>
+   <bean id="student1"
+   class="com.itc.spring.student.Student">
+          <constructor-arg value="102" index="0"/>
+          <constructor-arg value="Palah" index="1"/>
+          <constructor-arg value="M" index="2"/>
+          <constructor-arg value="24" index="3"/>
+   </bean>
+<bean id="classroom" class="com.itc.spring.student.ClassRoom" >
+<constructor-arg ref="student"></constructor-arg>
+</bean>
+<bean id="classroom1" class="com.itc.spring.student.ClassRoom" >
+<constructor-arg ref="student1"></constructor-arg>
+</bean>
+</beans>
